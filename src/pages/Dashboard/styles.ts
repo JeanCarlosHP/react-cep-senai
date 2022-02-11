@@ -9,16 +9,22 @@ export const Container = styled.div`
 export const Title = styled.h2`
   font-size: 48px;
   color: #3a3a3a;
-  max-width: 590px;
   line-height: 56px;
-
-  margin-top: 80px;
-`;
-
-export const Form = styled.form`
-  display: flex;
+  text-align: center;
 
   margin-top: 40px;
+
+  @media (max-width: 480px) {
+    & {
+      width: 90%;
+    }
+  }
+`;
+
+export const Form = styled.div`
+  display: flex;
+
+  margin: 40px auto 0 auto;
   max-width: 700px;
 
   input {
@@ -31,9 +37,9 @@ export const Form = styled.form`
     outline: none;
     color: #3a3a3a;
 
-		&::placeholder {
-			color: #a8a8b3;
-		}
+    &::placeholder {
+      color: #a8a8b3;
+    }
   }
 
   button {
@@ -45,10 +51,40 @@ export const Form = styled.form`
     color: #fff;
     font-weight: bold;
 
-		transition: background-color 0.2s;
+    transition: background-color 0.2s;
 
-		&:hover {
-			background-color: ${shade(0.2, "#04d361")};
-		}
+    &:hover {
+      background-color: ${shade(0.2, "#04d361")};
+    }
   }
+`;
+
+export const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  max-width: ;
+
+  margin-top: 4.375rem;
+  margin-bottom: 3rem;
+`;
+
+export const Card = styled.div`
+  background-color: #fafafa;
+  padding: 20px;
+
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  
+  p {
+    line-height: 20px;
+  }
+`;
+
+export const Error = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 0.5rem;
 `;
